@@ -3,7 +3,7 @@ package br.ada.customer.crud.integration.memoryrepository;
 import br.ada.customer.crud.integration.database.MemoryDatabase;
 import br.ada.customer.crud.model.Customer;
 import br.ada.customer.crud.usecases.repository.CustomerRepository;
-import br.ada.customer.crud.usecases.repository.RepositoryException;
+import br.ada.customer.crud.exceptions.RepositoryException;
 
 import java.util.List;
 import java.util.Objects;

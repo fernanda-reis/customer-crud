@@ -1,4 +1,4 @@
-package br.ada.customer.crud.usecases.repository;
+package br.ada.customer.crud.exceptions;
 
 public class RepositoryException extends RuntimeException {
 

@@ -5,7 +5,7 @@ import br.ada.customer.crud.model.Customer;
 import br.ada.customer.crud.model.Order;
 import br.ada.customer.crud.model.OrderItem;
 import br.ada.customer.crud.usecases.repository.OrderRepository;
-import br.ada.customer.crud.usecases.repository.RepositoryException;
+import br.ada.customer.crud.exceptions.RepositoryException;
 
 import java.util.List;
 import java.util.Objects;

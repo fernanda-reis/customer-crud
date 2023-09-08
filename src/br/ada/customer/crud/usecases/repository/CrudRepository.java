@@ -1,5 +1,7 @@
 package br.ada.customer.crud.usecases.repository;
 
+import br.ada.customer.crud.exceptions.RepositoryException;
+
 import java.util.List;
 
 public interface CrudRepository<T, ID> {
