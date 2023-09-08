@@ -9,6 +9,7 @@ import br.ada.customer.crud.usecases.repository.OrderRepository;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Random;
 
 public class OrderUseCaseImpl implements IOrderUseCase {
     private OrderRepository repository;
@@ -27,9 +28,14 @@ public class OrderUseCaseImpl implements IOrderUseCase {
     public Order create(Customer customer) {
         Order order = new Order();
         order.setCustomer(customer);
+
+        Random gerador = new Random();
+        order.setId(gerador.nextLong());
         order.setOrderedAt(LocalDateTime.now());
+
         order.setStatus(OrderStatus.OPEN);
         repository.save(order);
+        System.out.println("Pedido criado: " + order.getId());
         return order;
     }
 
