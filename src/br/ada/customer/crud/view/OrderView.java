@@ -16,8 +16,10 @@ public class OrderView {
     private ICustomerUseCase customerUseCase;
     private IProductUseCase productUseCase;
 
-    public OrderView(IOrderUseCase useCase){
+    public OrderView(IOrderUseCase useCase, ICustomerUseCase customerUseCase, IProductUseCase productUseCase){
         this.useCase = useCase;
+        this.customerUseCase = customerUseCase;
+        this.productUseCase = productUseCase;
     }
 
     public void showMenu() {

@@ -1,6 +1,7 @@
 package br.ada.customer.crud.view;
 
 import br.ada.customer.crud.factory.CustomerFactory;
+import br.ada.customer.crud.factory.OrderFactory;
 import br.ada.customer.crud.factory.ProductFactory;
 
 import java.util.Scanner;
@@ -45,7 +46,13 @@ public class MenuView {
     }
 
     public void order() {
+        OrderView presentation = new OrderView(
+                OrderFactory.createUseCase(),
+                CustomerFactory.createUseCase(),
+                ProductFactory.createUseCase()
 
+        );
+        presentation.showMenu();
     }
 
 }
